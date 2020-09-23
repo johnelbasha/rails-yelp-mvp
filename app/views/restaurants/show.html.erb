@@ -1,0 +1,13 @@
+<div class="container">
+  <h1> <%= @restaurant.name %> </h1>
+  <p> <%= @restaurant.address %></p>
+  <p> <%= @restaurant.category %></p>
+  <p> <%= @restaurant.phone_number %></p>
+</div>
+
+<div class="container">
+  <h3>Reviews</h3>
+  <% @restaurant.reviews.each do | rev | %>
+    <p><%= rev.content %> | Rating:<%= rev.rating %>/5</p>
+    <% end %>
+</div>
