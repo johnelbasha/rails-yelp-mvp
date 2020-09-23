@@ -6,6 +6,12 @@
 </div>
 
 <div class="container">
+
+  <h4>
+    <%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %>
+  </h4>
+
+
   <h3>Reviews</h3>
   <% @restaurant.reviews.each do | rev | %>
     <p><%= rev.content %> | Rating:<%= rev.rating %>/5</p>
